@@ -3,63 +3,69 @@
 //  This is the ONLY file you need to change to make the site yours.
 //  Your name, links, and projects all live here. Save the file and the
 //  browser refreshes automatically.
+//
+//  (Soon you'll also be able to edit this content from the browser after
+//   signing in — this file then becomes the starting/fallback content.)
 // ============================================================================
 
 export const site = {
-  name: "Your Name", // <- put your real name here
-  role: "Aspiring Software Developer", // shows above your name in the hero
+  name: "Yesukhei Baatar",
+  role: "Aspiring Programmer",
   // One or two sentences that introduce you:
   tagline:
-    "I build things for the web. Right now I'm learning Next.js, TypeScript, and everything in between.",
+    "Aspiring programmer from Ulaanbaatar, heading toward cybersecurity and AI engineering. I like figuring out how systems work — and how to build them to be secure and smart.",
   location: "Ulaanbaatar, Mongolia",
-  email: "you@example.com", // your contact email
+  email: "sharshuwuu@gmail.com", // shown publicly on the site — change or hide anytime
 
   // Profile links. Leave any value as "" (empty) to hide that link.
   socials: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
+    github: "https://github.com/a02d9vm32zcr2",
+    linkedin: "", // empty = hidden
     twitter: "", // empty = hidden
   },
 
   // The "About" section — each string becomes its own paragraph.
   about: [
-    "Write a short paragraph about who you are and what you like building.",
-    "Add a second one about what you're learning or what kind of work you're looking for.",
+    "I'm an aspiring programmer based in Ulaanbaatar, Mongolia. I'm especially drawn to cybersecurity and AI engineering — understanding how systems work, where they break, and how to build them to be secure and intelligent.",
+    "Right now I'm building my foundations across the web stack and learning by shipping real projects like this site. I'm looking for opportunities to grow as an engineer.",
   ],
 
   // Shown as little pills in the About section.
   skills: [
+    "Python",
+    "JavaScript",
     "TypeScript",
     "React",
     "Next.js",
-    "Tailwind CSS",
-    "Node.js",
-    "Supabase",
     "Git",
+    "Linux",
+    "Networking",
   ],
 
   // Your projects. Add or remove entries freely — the grid adjusts itself.
   projects: [
     {
-      title: "Project One",
+      title: "This Portfolio",
       description:
-        "A short sentence about what this project does and what you built it with.",
-      tags: ["Next.js", "Tailwind"],
-      link: "https://github.com/yourusername/project-one", // live demo or repo (or "" for none)
+        "The site you're looking at — built with Next.js, Tailwind, and Supabase, deployed on Vercel with a browser-based content editor.",
+      tags: ["Next.js", "Tailwind", "Supabase", "Vercel"],
+      link: "https://portfolio-ochre-xi-29.vercel.app/",
     },
     {
       title: "Project Two",
       description:
-        "Another project. Swap in something you've made — even a small experiment counts.",
-      tags: ["TypeScript", "API"],
+        "Replace this with something you've built — a security tool, a script, a game, anything. Even a small experiment counts.",
+      tags: ["Python", "Security"],
       link: "",
     },
     {
-      title: "This Portfolio",
+      title: "Project Three",
       description:
-        "The site you're looking at, built with Next.js, Tailwind, and deployed on Vercel.",
-      tags: ["Next.js", "Tailwind", "Vercel"],
+        "And one more. Swap in a real project and a link to the repo or demo.",
+      tags: ["AI", "TypeScript"],
       link: "",
     },
   ],
 };
+
+export type SiteContent = typeof site;

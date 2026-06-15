@@ -1,10 +1,10 @@
-import { site } from "@/content";
+import type { SiteContent } from "@/content";
 
-export default function Contact() {
+export default function Contact({ content }: { content: SiteContent }) {
   const links = [
-    { label: "GitHub", href: site.socials.github },
-    { label: "LinkedIn", href: site.socials.linkedin },
-    { label: "Twitter", href: site.socials.twitter },
+    { label: "GitHub", href: content.socials.github },
+    { label: "LinkedIn", href: content.socials.linkedin },
+    { label: "Twitter", href: content.socials.twitter },
   ].filter((link) => link.href); // hide any with an empty URL
 
   return (
@@ -20,10 +20,10 @@ export default function Contact() {
           Want to work together, or just want to say hi? My inbox is open.
         </p>
         <a
-          href={`mailto:${site.email}`}
+          href={`mailto:${content.email}`}
           className="mt-6 inline-block text-2xl font-semibold text-blue-600 hover:underline dark:text-blue-400"
         >
-          {site.email}
+          {content.email}
         </a>
         {links.length > 0 && (
           <div className="mt-8 flex gap-5 text-sm font-medium text-zinc-600 dark:text-zinc-400">

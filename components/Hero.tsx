@@ -1,16 +1,16 @@
-import { site } from "@/content";
+import type { SiteContent } from "@/content";
 
-export default function Hero() {
+export default function Hero({ content }: { content: SiteContent }) {
   return (
     <section id="top" className="mx-auto max-w-5xl px-6 py-24 sm:py-32">
       <p className="mb-4 text-sm font-medium uppercase tracking-widest text-blue-600 dark:text-blue-400">
-        {site.role}
+        {content.role}
       </p>
       <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-6xl dark:text-zinc-50">
-        Hi, I&rsquo;m {site.name}.
+        Hi, I&rsquo;m {content.name}.
       </h1>
       <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-        {site.tagline}
+        {content.tagline}
       </p>
       <div className="mt-8 flex flex-wrap gap-3">
         <a

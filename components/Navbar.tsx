@@ -1,6 +1,6 @@
-import { site } from "@/content";
+import type { SiteContent } from "@/content";
 
-export default function Navbar() {
+export default function Navbar({ content }: { content: SiteContent }) {
   return (
     <header className="sticky top-0 z-50 border-b border-black/[.06] bg-white/80 backdrop-blur dark:border-white/[.08] dark:bg-black/70">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
@@ -8,7 +8,7 @@ export default function Navbar() {
           href="#top"
           className="font-semibold tracking-tight text-zinc-900 dark:text-zinc-50"
         >
-          {site.name}
+          {content.name}
         </a>
         <ul className="flex items-center gap-6 text-sm text-zinc-600 dark:text-zinc-400">
           <li>

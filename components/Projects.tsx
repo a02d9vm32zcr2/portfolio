@@ -1,6 +1,6 @@
-import { site } from "@/content";
+import type { SiteContent } from "@/content";
 
-export default function Projects() {
+export default function Projects({ content }: { content: SiteContent }) {
   return (
     <section
       id="projects"
@@ -11,7 +11,7 @@ export default function Projects() {
           Projects
         </h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
-          {site.projects.map((project) => (
+          {content.projects.map((project) => (
             <a
               key={project.title}
               href={project.link || "#"}
